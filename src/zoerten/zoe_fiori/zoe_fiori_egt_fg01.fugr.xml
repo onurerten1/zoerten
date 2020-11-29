@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Fiori Eğitiim oData Function Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZOE_FIORI_EGT_FG01TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZOE_FIORI_EGT_FG01</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZOE_FIORI_FM_EBEVEYN_CREATE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Fiori oData Ebeveyn Create FM</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_EBEVEYN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZOE_FIO_EBEVEYN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_EBEVEYN</PARAMETER>
+       <TYP>ZOE_FIO_EBEVEYN</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_EBEVEYN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiori oData Ebeveyn Tablosu</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_EBEVEYN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiori oData Ebeveyn Tablosu</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOE_FIORI_FM_EBEVEYN_READLIST</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>get entity set</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_FILTER</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR40</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_EBEVEYN</PARAMETER>
+       <DBSTRUCT>ZOE_FIO_EBEVEYN</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_FILTER</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_EBEVEYN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Fiori oData Ebeveyn Tablosu</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

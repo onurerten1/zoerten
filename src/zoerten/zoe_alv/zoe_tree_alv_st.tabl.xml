@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>ZOE_TREE_ALV_ST</TABNAME>
+    <TABCLASS>INTTAB</TABCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <TABNAME>ZOE_TREE_ALV_ST</TABNAME>
+     <FIELDNAME>UNTPR</FIELDNAME>
+     <POSITION>0001</POSITION>
+     <ROLLNAME>ZOE_DE_UNT</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <REFTABLE>VBAK</REFTABLE>
+     <REFFIELD>WAERK</REFFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <TABNAME>ZOE_TREE_ALV_ST</TABNAME>
+     <FIELDNAME>NETWR</FIELDNAME>
+     <POSITION>0002</POSITION>
+     <ROLLNAME>NETWR</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <REFTABLE>VBAK</REFTABLE>
+     <REFFIELD>WAERK</REFFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <TABNAME>ZOE_TREE_ALV_ST</TABNAME>
+     <FIELDNAME>KWMENG</FIELDNAME>
+     <POSITION>0003</POSITION>
+     <ROLLNAME>KWMENG</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <REFTABLE>VBAP</REFTABLE>
+     <REFFIELD>VRKME</REFFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+   </DD03P_TABLE>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <DD02_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Tree ALV Structure</DDTEXT>
+    </item>
+   </DD02_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

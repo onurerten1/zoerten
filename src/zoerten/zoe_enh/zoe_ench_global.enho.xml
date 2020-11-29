@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>HOOK_IMPL</TOOL>
+   <SHORTTEXT>global data for fm last_week</SHORTTEXT>
+   <ORIGINAL_OBJECT>
+    <PGMID>R3TR</PGMID>
+    <ORG_OBJ_TYPE>FUGR</ORG_OBJ_TYPE>
+    <ORG_OBJ_NAME>CADA</ORG_OBJ_NAME>
+    <ORG_MAIN_TYPE>FUGR</ORG_MAIN_TYPE>
+    <ORG_MAIN_NAME>CADA</ORG_MAIN_NAME>
+    <PROGRAMNAME>SAPLCADA</PROGRAMNAME>
+   </ORIGINAL_OBJECT>
+   <ENHANCEMENTS>
+    <ENH_HOOK_IMPL>
+     <PROGRAMNAME>SAPLCADA</PROGRAMNAME>
+     <ENHMODE>S</ENHMODE>
+     <FULL_NAME>\PR:SAPLCADA\IC:LCADATOP\SE:END\EI</FULL_NAME>
+     <SOURCE>
+      <item>DATA: gv_no_holiday TYPE N.</item>
+     </SOURCE>
+    </ENH_HOOK_IMPL>
+    <ENH_HOOK_IMPL>
+     <PROGRAMNAME>SAPLCADA</PROGRAMNAME>
+     <ENHMODE>D</ENHMODE>
+     <FULL_NAME>\FU:LAST_WEEK\SE:END\EI</FULL_NAME>
+     <SOURCE>
+      <item>CALL FUNCTION &apos;HOLIDAY_GET&apos;</item>
+      <item> EXPORTING</item>
+      <item>   HOLIDAY_CALENDAR                 = &apos;TR&apos;</item>
+      <item>*   FACTORY_CALENDAR                 = &apos; &apos;</item>
+      <item>   DATE_FROM                        = Monday</item>
+      <item>   DATE_TO                          = Sunday</item>
+      <item>* IMPORTING</item>
+      <item>*   YEAR_OF_VALID_FROM               =</item>
+      <item>*   YEAR_OF_VALID_TO                 =</item>
+      <item>*   RETURNCODE                       =</item>
+      <item>  TABLES</item>
+      <item>    holidays                         = t_holidays</item>
+      <item> EXCEPTIONS</item>
+      <item>   FACTORY_CALENDAR_NOT_FOUND       = 1</item>
+      <item>   HOLIDAY_CALENDAR_NOT_FOUND       = 2</item>
+      <item>   DATE_HAS_INVALID_FORMAT          = 3</item>
+      <item>   DATE_INCONSISTENCY               = 4</item>
+      <item>   OTHERS                           = 5.</item>
+      <item>IF sy-subrc &lt;&gt; 0.</item>
+      <item>* Implement suitable error handling here</item>
+      <item>  ELSEIF sy-subrc = 0.</item>
+      <item>   DESCRIBE TABLE t_holidays LINES gv_no_holiday.</item>
+      <item>   holidays = gv_no_holiday.</item>
+      <item>ENDIF.</item>
+      <item/>
+     </SOURCE>
+    </ENH_HOOK_IMPL>
+   </ENHANCEMENTS>
+   <SOTR>
+    <item>
+     <HEADER>
+      <CONCEPT>00505697D8CA1EDA9BB34085B51CE573</CONCEPT>
+      <CREA_LAN>T</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>00505697D8CA1EDA9BB34085B51CE573</CONCEPT>
+       <LANGU>T</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>042</LENGTH>
+       <TEXT>global data for fm last_week</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+   </SOTR>
+   <SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>ZOE_ENCH_GLOBAL</OBJ_NAME>
+     <CONCEPT>00505697D8CA1EDA9BB34085B51CE573</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+   </SOTR_USE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

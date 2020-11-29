@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SMTG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SMTG>
+    <HEADER>
+     <ID>ZOE_MAIL_TEST</ID>
+     <VERSION>A</VERSION>
+     <IS_PREDELIVERED>X</IS_PREDELIVERED>
+    </HEADER>
+    <HEADER_T>
+     <SMTG_TMPL_HDR_T>
+      <ID>ZOE_MAIL_TEST</ID>
+      <VERSION>A</VERSION>
+      <LANGU>T</LANGU>
+     </SMTG_TMPL_HDR_T>
+    </HEADER_T>
+    <CONTENT>
+     <SMTG_TMPL_CONT>
+      <ID>ZOE_MAIL_TEST</ID>
+      <VERSION>A</VERSION>
+      <LANGU>T</LANGU>
+     </SMTG_TMPL_CONT>
+    </CONTENT>
+   </SMTG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

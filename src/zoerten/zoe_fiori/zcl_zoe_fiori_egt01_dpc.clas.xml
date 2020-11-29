@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+    <LANGU>T</LANGU>
+    <DESCRIPT>Data Provider Base Class</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+     <CMPNAME>EBEVEYNSET_CREATE_ENTITY</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Related EntitySet Name: EbeveynSet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+     <CMPNAME>EBEVEYNSET_DELETE_ENTITY</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Related EntitySet Name: EbeveynSet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+     <CMPNAME>EBEVEYNSET_GET_ENTITY</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Related EntitySet Name: EbeveynSet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+     <CMPNAME>EBEVEYNSET_GET_ENTITYSET</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Related EntitySet Name: EbeveynSet</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_ZOE_FIORI_EGT01_DPC</CLSNAME>
+     <CMPNAME>EBEVEYNSET_UPDATE_ENTITY</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Related EntitySet Name: EbeveynSet</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

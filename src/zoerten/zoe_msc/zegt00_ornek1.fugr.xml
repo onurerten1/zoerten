@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Eğitim Örneği</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZEGT00_ORNEK1F01</SOBJ_NAME>
+    <SOBJ_NAME>LZEGT00_ORNEK1TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZEGT00_ORNEK1</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_ET00_ORNEK1_FM1</FUNCNAME>
+     <SHORT_TEXT>İşlev Modülü Örneği</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_MATNR</PARAMETER>
+       <DBFIELD>MARA-MATNR</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IS_T001L</PARAMETER>
+       <DBFIELD>T001L</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_MARD</PARAMETER>
+       <DBFIELD>MARD</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>DATA_NOT_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IS_T001L</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Depo yerleri</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_MARD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme depo yeri verileri</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dönüş parametresi</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DATA_NOT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Veri Bulunamadı</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

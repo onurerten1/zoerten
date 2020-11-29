@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.1.20140218.1.907162_SAP" APIVersion="3.6.13324.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2020-02-24T11:37:12Z" uuid="5605364d-3d7a-4053-bd58-298a1f6571ee">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.3/">
+   <?formServer defaultPDFRenderFormat acrobat10.0dynamic?>
+   <subform layout="tb" locale="tr_TR" name="data" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Page1">
+            <contentArea h="135.3001mm" w="197.3006mm" x="0.25in" y="0.25in"/>
+            <medium long="210mm" orientation="landscape" short="148mm" stock="a5Transverse"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="tb" name="subForm1" w="197.299mm">
+         <subform h="135.301mm" name="subForm2" w="197.299mm">
+            <bind match="none"/>
+            <keep intact="none"/>
+            <field h="9mm" name="MATNR" w="62mm" x="66.675mm" y="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="1EB90DD0-121A-49BD-A967-21453E870757">Malzeme:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="40"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].MATNR"/>
+               <desc>
+                  <text name="Schema Annotation">Malzeme numarası</text>
+               </desc>
+            </field>
+            <field h="9mm" name="MAKTX" w="152.4mm" x="25.4mm" y="22.225mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="40.5514mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="DC28440B-916F-4042-A08B-7DD0D2DF4432">Malzeme kısa metni:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="40"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].MAKTX"/>
+               <desc>
+                  <text name="Schema Annotation">Malzeme kısa metni</text>
+               </desc>
+            </field>
+            <field h="9mm" name="MENGE" w="62mm" x="25.4mm" y="31.75mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <decimal fracDigits="3" leadDigits="10"/>
+               </value>
+               <caption reserve="24.5012mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="FE3C235D-EFEA-47C0-B479-071B80997F03">Miktar:</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].MENGE"/>
+               <desc>
+                  <text name="Schema Annotation">Miktar</text>
+               </desc>
+               <validate nullTest="error"/>
+            </field>
+            <field h="9mm" name="MEINS" w="60.325mm" x="117.475mm" y="31.75mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="1BB99374-D677-4A57-8C4A-6788F37A73BB">Ölçü Birimi:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="3"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].MEINS"/>
+               <desc>
+                  <text name="Schema Annotation">Temel ölçü birimi</text>
+               </desc>
+            </field>
+            <field h="9mm" name="WERKS" w="62mm" x="25.4mm" y="41.275mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="24.2258mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="2B6C6087-9B9D-44AA-811A-2FE85FD51F87">Üretim Yeri:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="4"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].WERKS"/>
+               <desc>
+                  <text name="Schema Annotation">Üretim yeri</text>
+               </desc>
+            </field>
+            <field h="9mm" name="NAME1" w="60.325mm" x="117.475mm" y="41.275mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="24.7779mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="1D78D882-B5E7-4C4C-9354-EA92037F9D97">ÜY Tanımı:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="30"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].NAME1"/>
+               <desc>
+                  <text name="Schema Annotation">Ad</text>
+               </desc>
+            </field>
+            <field h="9mm" name="LGORT" w="62mm" x="25.4mm" y="50.8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="24.2258mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="108D9D04-0029-47AF-8868-ADA8301F9EF9">Depo Yeri:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="4"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].LGORT"/>
+               <desc>
+                  <text name="Schema Annotation">Depo yeri</text>
+               </desc>
+            </field>
+            <field h="9mm" name="LGOBE" w="60.325mm" x="117.475mm" y="50.8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="8EA542BF-76BF-498C-A9B1-E87C86903746">DpYr Tanımı:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="16"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].LGOBE"/>
+               <desc>
+                  <text name="Schema Annotation">Depo yeri tanımı</text>
+               </desc>
+            </field>
+            <field h="9mm" name="CHARG" w="62mm" x="69.85mm" y="60.325mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="24.2138mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="3A4DB78A-99E3-4BB1-AB2C-827C27203F6C">Parti:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="10"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].CHARG"/>
+               <desc>
+                  <text name="Schema Annotation">Parti numarası</text>
+               </desc>
+            </field>
+            <field h="9mm" name="LIFNR" w="62mm" x="25.4mm" y="69.85mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="F1C94DA2-3B75-45B5-8406-77FE1174160D">Satıcı:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="10"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].LIFNR"/>
+               <desc>
+                  <text name="Schema Annotation">Satıcının hesap numarası</text>
+               </desc>
+            </field>
+            <field h="9mm" name="KUNNR" w="60.325mm" x="117.475mm" y="69.85mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <para vAlign="middle"/>
+                  <value>
+                     <text xliff:rid="4E6D68FC-8ED1-4EFE-A394-F65F26F21463">Müşteri:</text>
+                  </value>
+               </caption>
+               <value>
+                  <text maxChars="10"/>
+               </value>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].KUNNR"/>
+               <desc>
+                  <text name="Schema Annotation">Müşterinin hesap numarası</text>
+               </desc>
+            </field>
+            <field h="31.75mm" name="Code128BarCode1" w="88.9mm" x="57.15mm" y="98.425mm">
+               <ui>
+                  <barcode checksum="auto" dataLength="0" textLocation="belowEmbedded" type="code128" wideNarrowRatio="fixed"/>
+               </ui>
+               <font typeface="Courier New"/>
+               <bind match="dataRef" ref="$record.IT_ETIKET.DATA[*].BARKOD"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <breakAfter/>
+         <keep intact="contentArea"/>
+         <occur max="-1"/>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">11.0.1.20140218.1.907162.903801</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 UTF-16 2 116 0003001D002500270030003300360037003C004400460048004C004E004F0050005100520053005500560057005D00670068006F008100D500FA?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner Grid show:1, snap:1, units:0, color:ff8080, origin:(0,0), interval:(125000,125000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner FormTargetVersion 33?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 68?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://S4HANADEV.MBIS.COM.TR:8443/sap/bc/fp/form/layout/</base>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>8</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="ZOE_AF_ETIKET">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <IT_ETIKET dd:minOccur="0">
+            <DATA dd:maxOccur="-1">
+               <MATNR/>
+               <MAKTX/>
+               <MENGE/>
+               <MEINS/>
+               <WERKS/>
+               <NAME1/>
+               <LGORT/>
+               <LGOBE/>
+               <CHARG/>
+               <LIFNR/>
+               <KUNNR/>
+               <BARKOD/>
+            </DATA>
+         </IT_ETIKET>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="Türkçe (Türkiye)" name="tr_TR">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>Ocak</month>
+            <month>Şubat</month>
+            <month>Mart</month>
+            <month>Nisan</month>
+            <month>Mayıs</month>
+            <month>Haziran</month>
+            <month>Temmuz</month>
+            <month>Ağustos</month>
+            <month>Eylül</month>
+            <month>Ekim</month>
+            <month>Kasım</month>
+            <month>Aralık</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Oca</month>
+            <month>Şub</month>
+            <month>Mar</month>
+            <month>Nis</month>
+            <month>May</month>
+            <month>Haz</month>
+            <month>Tem</month>
+            <month>Ağu</month>
+            <month>Eyl</month>
+            <month>Eki</month>
+            <month>Kas</month>
+            <month>Ara</month>
+         </monthNames>
+         <dayNames>
+            <day>Pazar</day>
+            <day>Pazartesi</day>
+            <day>Salı</day>
+            <day>Çarşamba</day>
+            <day>Perşembe</day>
+            <day>Cuma</day>
+            <day>Cumartesi</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Paz</day>
+            <day>Pzt</day>
+            <day>Sal</day>
+            <day>Çar</day>
+            <day>Per</day>
+            <day>Cum</day>
+            <day>Cmt</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">DD MMMM YYYY EEEE</datePattern>
+         <datePattern name="long">DD MMMM YYYY EEEE</datePattern>
+         <datePattern name="med">DD.MMM.YYYY</datePattern>
+         <datePattern name="short">DD.MM.YYYY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">HH:MM:SS Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GanjkHmsSEDFwWxhKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9 $</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">TL</currencySymbol>
+         <currencySymbol name="isoname">TRL</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2020-02-24T11:37:12Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:5605364d-3d7a-4053-bd58-298a1f6571ee</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>11.0.1.20140218.1.907162.903801</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

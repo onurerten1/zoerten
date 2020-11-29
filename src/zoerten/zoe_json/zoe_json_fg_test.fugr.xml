@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <INCLUDES>
+    <SOBJ_NAME>LZOE_JSON_FG_TESTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZOE_JSON_FG_TEST</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZOE_JSON_FM_DATA_02</FUNCNAME>
+     <SHORT_TEXT>JSON FM to get data</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_URL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>URL</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_RESPONSE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STRING</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRET2_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_URL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Uniform resource locator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESPONSE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>JSON Response</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOE_JSON_FM_DATA_03</FUNCNAME>
+     <SHORT_TEXT>JSON FM to get data</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_URL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>URL</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_RESPONSE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STRING</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRET2_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_URL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Uniform resource locator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_RESPONSE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>JSON Response</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOE_JSON_FM_DATA_TEST</FUNCNAME>
+     <SHORT_TEXT>JSON FM to get data</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_STRING</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STRING</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_TAB</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZOE_JSON_TT_POKE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ES_TAB</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZOE_JSON_ST_POKE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRET2_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_STRING</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>json data table type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>JSON Pokemon Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control Test'
+@MappingRole: true
+define role ZOE_AC01 {
+    grant
+        select
+            on
+                zoe_cds09
+                where ( MyFlightCarrier ) = 
+                aspect pfcg_auth( S_CARRID, CARRID, ACTVT = '03' );
+                
+}

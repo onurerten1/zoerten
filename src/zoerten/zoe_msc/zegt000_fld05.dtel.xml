@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZEGT000_FLD05</ROLLNAME>
+    <DDLANGUAGE>T</DDLANGUAGE>
+    <DOMNAME>MATNR</DOMNAME>
+    <HEADLEN>40</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Eğitim Örneği</DDTEXT>
+    <REPTEXT>Eğitim Örneği</REPTEXT>
+    <SCRTEXT_S>Eğtm.Örn.</SCRTEXT_S>
+    <SCRTEXT_M>Eğitim Örneği</SCRTEXT_M>
+    <SCRTEXT_L>Eğitim Örneği</SCRTEXT_L>
+    <DTELMASTER>T</DTELMASTER>
+    <SHLPNAME>ZEGT000_MATNR_SH</SHLPNAME>
+    <SHLPFIELD>MATNR</SHLPFIELD>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

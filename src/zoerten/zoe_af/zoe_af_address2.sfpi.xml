@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>T</LANGUAGE>
+     <ID/>
+     <TEXT>address 2</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>IS_ADDRESS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ADRS1</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IT_ADDRESS_LINES</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_ADR_PRINTFORM_TABLE</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IS_ADDRESS_LINE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_ADR_PRINTFORM_TABLE_LINE</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IS_SCUSTOM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>SCUSTOM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE>TYPES:  BEGIN OF ty_adr_printform_table_line,</FPCLINE>
+      <FPCLINE>          line_type       TYPE ad_line_tp,</FPCLINE>
+      <FPCLINE>          address_line    LIKE adrs-line0,</FPCLINE>
+      <FPCLINE>        END OF ty_adr_printform_table_line.</FPCLINE>
+      <FPCLINE>TYPES: ty_adr_printform_table TYPE TABLE OF ty_adr_printform_table_line.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>IS_CUSTOMER_ID</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>S_CUSTOMER</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IS_COUNTRY</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>LAND1</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>IS_CUSTOMER_ID</FPPARAMETER>
+      <FPPARAMETER>IS_COUNTRY</FPPARAMETER>
+      <FPPARAMETER>IS_ADDRESS</FPPARAMETER>
+      <FPPARAMETER>IS_SCUSTOM</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS>
+      <FPPARAMETER>IT_ADDRESS_LINES</FPPARAMETER>
+     </OUTPUT_PARAMETERS>
+     <INITIALIZATION>
+      <FPCLINE>SELECT SINGLE *</FPCLINE>
+      <FPCLINE>        FROM  scustom</FPCLINE>
+      <FPCLINE>        INTO  is_scustom</FPCLINE>
+      <FPCLINE>        WHERE id EQ is_customer_id.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>is_address-title_text	= is_scustom-form.</FPCLINE>
+      <FPCLINE>is_address-name1      = is_scustom-name.</FPCLINE>
+      <FPCLINE>is_address-street	    = is_scustom-street.</FPCLINE>
+      <FPCLINE>is_address-po_box	    = is_scustom-postbox.</FPCLINE>
+      <FPCLINE>is_address-post_code1	= is_scustom-postcode.</FPCLINE>
+      <FPCLINE>is_address-city1      = is_scustom-city.</FPCLINE>
+      <FPCLINE>is_address-region	    = is_scustom-region.</FPCLINE>
+      <FPCLINE>is_address-country    = is_scustom-country.</FPCLINE>
+      <FPCLINE>* Address Format According to Post Office Guidelines</FPCLINE>
+      <FPCLINE>*  Note : Refer Function module documentation for more information.</FPCLINE>
+      <FPCLINE>CALL FUNCTION &apos;ADDRESS_INTO_PRINTFORM&apos;</FPCLINE>
+      <FPCLINE>    EXPORTING</FPCLINE>
+      <FPCLINE>      address_1   = is_address</FPCLINE>
+      <FPCLINE>      address_type  = &apos;1&apos;            &quot;normal/company</FPCLINE>
+      <FPCLINE>      sender_country  = is_country</FPCLINE>
+      <FPCLINE>      number_of_lines	= 8</FPCLINE>
+      <FPCLINE>      IMPORTING</FPCLINE>
+      <FPCLINE>        address_printform_table = it_address_lines.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

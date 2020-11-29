@@ -1,0 +1,136 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="ZOE_POKE_T" type="ddic:ZOE_JSON_TT_POKE"/>
+  <tt:template>
+    <ZOE_POKE_T>
+      <tt:loop ref=".ZOE_POKE_T">
+        <ZOE_JSON_ST_POKE>
+          <ID tt:value-ref="ID"/>
+          <NAME tt:value-ref="NAME"/>
+          <BASE_EXPERIENCE tt:value-ref="BASE_EXPERIENCE"/>
+          <HEIGHT tt:value-ref="HEIGHT"/>
+          <MEINS_HEIGHT tt:value-ref="MEINS_HEIGHT"/>
+          <IS_DEFAULT tt:value-ref="IS_DEFAULT"/>
+          <ORDER tt:value-ref="ORDER"/>
+          <WEIGHT tt:value-ref="WEIGHT"/>
+          <MEINS_WEIGHT tt:value-ref="MEINS_WEIGHT"/>
+          <ABILITIES>
+            <tt:loop ref="ABILITIES">
+              <ZOE_POKE_ST_ABILITIES>
+                <ABILITY>
+                  <NAME tt:value-ref="ABILITY.NAME"/>
+                  <URL tt:value-ref="ABILITY.URL"/>
+                </ABILITY>
+                <IS_HIDDEN tt:value-ref="IS_HIDDEN"/>
+                <SLOT tt:value-ref="SLOT"/>
+              </ZOE_POKE_ST_ABILITIES>
+            </tt:loop>
+          </ABILITIES>
+          <FORMS>
+            <tt:loop ref="FORMS">
+              <ZOE_POKE_ST_FORMS>
+                <NAME tt:value-ref="NAME"/>
+                <URL tt:value-ref="URL"/>
+              </ZOE_POKE_ST_FORMS>
+            </tt:loop>
+          </FORMS>
+          <GAME_INDICES>
+            <tt:loop ref="GAME_INDICES">
+              <ZOE_POKE_ST_GAME_IND>
+                <GAME_INDEX tt:value-ref="GAME_INDEX"/>
+                <VERSION>
+                  <NAME tt:value-ref="VERSION.NAME"/>
+                  <URL tt:value-ref="VERSION.URL"/>
+                </VERSION>
+              </ZOE_POKE_ST_GAME_IND>
+            </tt:loop>
+          </GAME_INDICES>
+          <HELD_ITEMS>
+            <tt:loop ref="HELD_ITEMS">
+              <ZOE_POKE_ST_HELD_ITEMS>
+                <ITEM>
+                  <NAME tt:value-ref="ITEM.NAME"/>
+                  <URL tt:value-ref="ITEM.URL"/>
+                </ITEM>
+                <VERSION_DETAILS>
+                  <tt:loop ref="VERSION_DETAILS">
+                    <ZOE_POKE_ST_VER_DET>
+                      <RARITY tt:value-ref="RARITY"/>
+                      <VERSION>
+                        <NAME tt:value-ref="VERSION.NAME"/>
+                        <URL tt:value-ref="VERSION.URL"/>
+                      </VERSION>
+                    </ZOE_POKE_ST_VER_DET>
+                  </tt:loop>
+                </VERSION_DETAILS>
+              </ZOE_POKE_ST_HELD_ITEMS>
+            </tt:loop>
+          </HELD_ITEMS>
+          <LOCATION_AREA_ENCOUNTERS tt:value-ref="LOCATION_AREA_ENCOUNTERS"/>
+          <MOVES>
+            <tt:loop ref="MOVES">
+              <ZOE_POKE_ST_MOVES>
+                <MOVE>
+                  <NAME tt:value-ref="MOVE.NAME"/>
+                  <URL tt:value-ref="MOVE.URL"/>
+                </MOVE>
+                <VERSION_GROUP_DETAILS>
+                  <tt:loop ref="VERSION_GROUP_DETAILS">
+                    <ZOE_POKE_ST_VGD>
+                      <LEVEL_LEARNED_AT tt:value-ref="LEVEL_LEARNED_AT"/>
+                      <MOVE_LEARN_METHOD>
+                        <NAME tt:value-ref="MOVE_LEARN_METHOD.NAME"/>
+                        <URL tt:value-ref="MOVE_LEARN_METHOD.URL"/>
+                      </MOVE_LEARN_METHOD>
+                      <VERSION_GROUP>
+                        <NAME tt:value-ref="VERSION_GROUP.NAME"/>
+                        <URL tt:value-ref="VERSION_GROUP.URL"/>
+                      </VERSION_GROUP>
+                    </ZOE_POKE_ST_VGD>
+                  </tt:loop>
+                </VERSION_GROUP_DETAILS>
+              </ZOE_POKE_ST_MOVES>
+            </tt:loop>
+          </MOVES>
+          <SPECIES>
+            <NAME tt:value-ref="SPECIES.NAME"/>
+            <URL tt:value-ref="SPECIES.URL"/>
+          </SPECIES>
+          <SPRITES>
+            <BACK_FEMALE tt:value-ref="SPRITES.BACK_FEMALE"/>
+            <BACK_SHINY_FEMALE tt:value-ref="SPRITES.BACK_SHINY_FEMALE"/>
+            <BACK_DEFAULT tt:value-ref="SPRITES.BACK_DEFAULT"/>
+            <FRONT_FEMALE tt:value-ref="SPRITES.FRONT_FEMALE"/>
+            <FRONT_SHINY_FEMALE tt:value-ref="SPRITES.FRONT_SHINY_FEMALE"/>
+            <BACK_SHINY tt:value-ref="SPRITES.BACK_SHINY"/>
+            <FRONT_DEFAULT tt:value-ref="SPRITES.FRONT_DEFAULT"/>
+            <FRONT_SHINY tt:value-ref="SPRITES.FRONT_SHINY"/>
+          </SPRITES>
+          <STATS>
+            <tt:loop ref="STATS">
+              <ZOE_POKE_ST_STATS>
+                <BASE_STAT tt:value-ref="BASE_STAT"/>
+                <EFFORT tt:value-ref="EFFORT"/>
+                <STAT>
+                  <NAME tt:value-ref="STAT.NAME"/>
+                  <URL tt:value-ref="STAT.URL"/>
+                </STAT>
+              </ZOE_POKE_ST_STATS>
+            </tt:loop>
+          </STATS>
+          <TYPES>
+            <tt:loop ref="TYPES">
+              <ZOE_POKE_ST_TYPES>
+                <SLOT tt:value-ref="SLOT"/>
+                <TYPE>
+                  <NAME tt:value-ref="TYPE.NAME"/>
+                  <URL tt:value-ref="TYPE.URL"/>
+                </TYPE>
+              </ZOE_POKE_ST_TYPES>
+            </tt:loop>
+          </TYPES>
+        </ZOE_JSON_ST_POKE>
+      </tt:loop>
+    </ZOE_POKE_T>
+  </tt:template>
+</tt:transform>

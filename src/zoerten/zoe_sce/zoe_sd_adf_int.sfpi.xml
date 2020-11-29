@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>E</LANGUAGE>
+     <ID/>
+     <TEXT>Senaryo Adobe Interfa</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>GS_ITEM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_ITEMS</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GT_ITEM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TT_ITEMS</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GS_HEADER</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TY_HEADER</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE>TYPES: BEGIN OF ty_header,</FPCLINE>
+      <FPCLINE>  fkdat type vbrk-fkdat,</FPCLINE>
+      <FPCLINE>  vbeln type vbrk-vbeln,</FPCLINE>
+      <FPCLINE>  name type string,</FPCLINE>
+      <FPCLINE>  address type string,</FPCLINE>
+      <FPCLINE>  kunag type vbrk-kunag,</FPCLINE>
+      <FPCLINE>  erdat type vbrp-erdat,</FPCLINE>
+      <FPCLINE>  vat_sum type vbrp-mwsbp,</FPCLINE>
+      <FPCLINE>  net_value_sum type vbrp-netwr,</FPCLINE>
+      <FPCLINE>  net_sum type vbrp-netwr,</FPCLINE>
+      <FPCLINE>  text type spell,</FPCLINE>
+      <FPCLINE>  line TYPE char2000,</FPCLINE>
+      <FPCLINE>  spell type char200,</FPCLINE>
+      <FPCLINE>  END OF ty_header.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  types: BEGIN OF ty_items,</FPCLINE>
+      <FPCLINE>    posnr like vbrp-posnr,</FPCLINE>
+      <FPCLINE>    matnr like vbrp-matnr,</FPCLINE>
+      <FPCLINE>    arktx like vbrp-arktx,</FPCLINE>
+      <FPCLINE>    fkimg like vbrp-fkimg,</FPCLINE>
+      <FPCLINE>    vrkme like vbrp-vrkme,</FPCLINE>
+      <FPCLINE>    net_fk like vbrp-netwr,</FPCLINE>
+      <FPCLINE>    mwsbp like vbrp-mwsbp,</FPCLINE>
+      <FPCLINE>    netwr like vbrp-netwr,</FPCLINE>
+      <FPCLINE>    waerk like vbrp-waerk,</FPCLINE>
+      <FPCLINE>    end of ty_items,</FPCLINE>
+      <FPCLINE>    tt_items TYPE TABLE OF ty_items.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>I_VBELN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>VBRP-VBELN</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>I_VBELN</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS>
+      <FPPARAMETER>GS_ITEM</FPPARAMETER>
+      <FPPARAMETER>GT_ITEM</FPPARAMETER>
+      <FPPARAMETER>GS_HEADER</FPPARAMETER>
+     </OUTPUT_PARAMETERS>
+     <INITIALIZATION>
+      <FPCLINE/>
+      <FPCLINE>select SINGLE</FPCLINE>
+      <FPCLINE>       vbrp~vbeln,</FPCLINE>
+      <FPCLINE>       vbrp~erdat,</FPCLINE>
+      <FPCLINE>       vbrk~kunag,</FPCLINE>
+      <FPCLINE>       vbrk~fkdat,</FPCLINE>
+      <FPCLINE>       ( but000~name_org1   &amp;&amp; &apos; &apos; &amp;&amp; but000~name_org2 ) AS name,</FPCLINE>
+      <FPCLINE>       ( adrc~street        &amp;&amp; &apos; &apos; &amp;&amp;</FPCLINE>
+      <FPCLINE>        adrc~str_suppl3     &amp;&amp; &apos; &apos; &amp;&amp;</FPCLINE>
+      <FPCLINE>        adrc~location       &amp;&amp; &apos; &apos; &amp;&amp;</FPCLINE>
+      <FPCLINE>        adrc~city2          &amp;&amp; &apos; &apos; &amp;&amp;</FPCLINE>
+      <FPCLINE>        adrc~home_city      &amp;&amp; &apos; &apos; &amp;&amp;</FPCLINE>
+      <FPCLINE>        adrc~post_code1 )   AS address</FPCLINE>
+      <FPCLINE>  from vbrp</FPCLINE>
+      <FPCLINE>  INNER JOIN vbrk on vbrp~vbeln eq vbrk~vbeln</FPCLINE>
+      <FPCLINE>   LEFT JOIN but000 ON vbrk~kunag EQ but000~partner</FPCLINE>
+      <FPCLINE>         LEFT JOIN but020 ON vbrk~kunag EQ but020~partner</FPCLINE>
+      <FPCLINE>         LEFT JOIN adrc   ON but020~addrnumber EQ adrc~addrnumber</FPCLINE>
+      <FPCLINE>         LEFT JOIN t005t  ON adrc~country EQ t005t~land1</FPCLINE>
+      <FPCLINE>         INTO CORRESPONDING FIELDS OF @gs_header</FPCLINE>
+      <FPCLINE>         WHERE vbrp~vbeln  EQ @i_vbeln</FPCLINE>
+      <FPCLINE>           AND t005t~spras EQ &apos;E&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  SELECT  p~posnr,</FPCLINE>
+      <FPCLINE>          p~matnr,</FPCLINE>
+      <FPCLINE>          p~arktx,</FPCLINE>
+      <FPCLINE>          p~fkimg,</FPCLINE>
+      <FPCLINE>          p~vrkme,</FPCLINE>
+      <FPCLINE>          p~mwsbp,</FPCLINE>
+      <FPCLINE>          p~netwr,</FPCLINE>
+      <FPCLINE>          p~waerk</FPCLINE>
+      <FPCLINE>    FROM vbrp as p</FPCLINE>
+      <FPCLINE>    INNER JOIN vbrk as k on</FPCLINE>
+      <FPCLINE>    p~vbeln eq k~vbeln</FPCLINE>
+      <FPCLINE>    where k~vbeln eq @i_vbeln</FPCLINE>
+      <FPCLINE>    INTO CORRESPONDING FIELDS OF TABLE @gt_item.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>LOOP AT gt_item INTO gs_item.</FPCLINE>
+      <FPCLINE>  if gs_item-fkimg ne 0.</FPCLINE>
+      <FPCLINE>  gs_item-net_fk = gs_item-netwr / gs_item-fkimg.</FPCLINE>
+      <FPCLINE>  MODIFY gt_item from gs_item TRANSPORTING net_fk.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>DO 50 TIMES.</FPCLINE>
+      <FPCLINE>append gs_item to gt_item.</FPCLINE>
+      <FPCLINE>ENDDO.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>LOOP AT gt_item INTO gs_item.</FPCLINE>
+      <FPCLINE>gs_header-vat_sum = gs_header-vat_sum + gs_item-mwsbp.</FPCLINE>
+      <FPCLINE>ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>LOOP AT gt_item into gs_item.</FPCLINE>
+      <FPCLINE>gs_header-net_value_sum = gs_header-net_value_sum</FPCLINE>
+      <FPCLINE>                          + gs_item-netwr.</FPCLINE>
+      <FPCLINE>ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>gs_header-net_sum = gs_header-vat_sum</FPCLINE>
+      <FPCLINE>                    + gs_header-net_value_sum.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>call function &apos;SPELL_AMOUNT&apos;</FPCLINE>
+      <FPCLINE>    EXPORTING</FPCLINE>
+      <FPCLINE>       amount = gs_header-net_sum</FPCLINE>
+      <FPCLINE>       currency = gs_item-waerk</FPCLINE>
+      <FPCLINE>       filler = space</FPCLINE>
+      <FPCLINE>       language = sy-langu</FPCLINE>
+      <FPCLINE>    IMPORTING</FPCLINE>
+      <FPCLINE>        in_words = gs_header-text</FPCLINE>
+      <FPCLINE>    EXCEPTIONS</FPCLINE>
+      <FPCLINE>        not_found = 1</FPCLINE>
+      <FPCLINE>        too_large = 2</FPCLINE>
+      <FPCLINE>        OTHERS    = 3.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>data: lines TYPE TABLE OF tline WITH HEADER LINE.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>DATA: lv_vbeln TYPE THEAD-TDNAME.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>lv_vbeln = i_vbeln.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>CALL FUNCTION &apos;READ_TEXT&apos;</FPCLINE>
+      <FPCLINE>  EXPORTING</FPCLINE>
+      <FPCLINE>    id                            = &apos;TX05&apos;</FPCLINE>
+      <FPCLINE>    language                      = &apos;E&apos;</FPCLINE>
+      <FPCLINE>    NAME                          = lv_vbeln</FPCLINE>
+      <FPCLINE>    OBJECT                        = &apos;VBBK&apos;</FPCLINE>
+      <FPCLINE>  TABLES</FPCLINE>
+      <FPCLINE>    lines                         = lines[]</FPCLINE>
+      <FPCLINE> EXCEPTIONS</FPCLINE>
+      <FPCLINE>   ID                            = 1</FPCLINE>
+      <FPCLINE>   LANGUAGE                      = 2</FPCLINE>
+      <FPCLINE>   NAME                          = 3</FPCLINE>
+      <FPCLINE>   NOT_FOUND                     = 4</FPCLINE>
+      <FPCLINE>   OBJECT                        = 5</FPCLINE>
+      <FPCLINE>   REFERENCE_CHECK               = 6</FPCLINE>
+      <FPCLINE>   WRONG_ACCESS_TO_ARCHIVE       = 7</FPCLINE>
+      <FPCLINE>   OTHERS                        = 8.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>loop at lines.</FPCLINE>
+      <FPCLINE>   CONCATENATE gs_header-line lines-tdline</FPCLINE>
+      <FPCLINE>   into gs_header-line</FPCLINE>
+      <FPCLINE>   SEPARATED BY space.</FPCLINE>
+      <FPCLINE>   ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>CONDENSE gs_header-address.</FPCLINE>
+      <FPCLINE>*CONDENSE gs_header-kunag.</FPCLINE>
+      <FPCLINE>CALL FUNCTION &apos;CONVERSION_EXIT_ALPHA_OUTPUT&apos;</FPCLINE>
+      <FPCLINE>EXPORTING</FPCLINE>
+      <FPCLINE>  input = gs_header-kunag</FPCLINE>
+      <FPCLINE>IMPORTING</FPCLINE>
+      <FPCLINE>  output = gs_header-kunag.</FPCLINE>
+      <FPCLINE>*BREAK-POINT.</FPCLINE>
+      <FPCLINE>CONCATENATE gs_header-text-word &apos;dollars and&apos; gs_header-text-decword &apos;cents&apos; INTO gs_header-spell SEPARATED BY space.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

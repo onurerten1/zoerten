@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>E</LANGUAGE>
+     <ID/>
+     <TEXT>ZOE_ADOBE_FORM13</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>IT_MARA</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TT_MATNR</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IT_MARC</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TT_PLANT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IT_EKPO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TT_EKPO</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE>TYPES:</FPCLINE>
+      <FPCLINE>BEGIN OF ty_material,</FPCLINE>
+      <FPCLINE>    matnr TYPE matnr,</FPCLINE>
+      <FPCLINE>    matkl TYPE matkl,</FPCLINE>
+      <FPCLINE>    bismt TYPE bismt,</FPCLINE>
+      <FPCLINE>END OF ty_material,</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>BEGIN OF ty_plant,</FPCLINE>
+      <FPCLINE>    matnr TYPE matnr,</FPCLINE>
+      <FPCLINE>    werks TYPE werks_d,</FPCLINE>
+      <FPCLINE>    pstat TYPE pstat_d,</FPCLINE>
+      <FPCLINE>    dsipr TYPE dispr,</FPCLINE>
+      <FPCLINE>END OF ty_plant,</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>BEGIN OF ty_ekpo,</FPCLINE>
+      <FPCLINE>    ebeln type ebeln,</FPCLINE>
+      <FPCLINE>    ebelp TYPE ebelp,</FPCLINE>
+      <FPCLINE>    txz01 type txz01,</FPCLINE>
+      <FPCLINE>    menge TYPE bstmg,</FPCLINE>
+      <FPCLINE>    meins TYPE bstme,</FPCLINE>
+      <FPCLINE>END OF ty_ekpo.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>TYPES: tt_matnr TYPE STANDARD TABLE OF ty_material,</FPCLINE>
+      <FPCLINE>       tt_plant TYPE STANDARD TABLE OF ty_plant,</FPCLINE>
+      <FPCLINE>       tt_ekpo  TYPE STANDARD TABLE OF ty_ekpo.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>V_ROW_R</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>I</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>V_ROW_L</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>I</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>V_ROW_R</FPPARAMETER>
+      <FPPARAMETER>V_ROW_L</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS>
+      <FPPARAMETER>V_ROW_R</FPPARAMETER>
+      <FPPARAMETER>V_ROW_L</FPPARAMETER>
+     </OUTPUT_PARAMETERS>
+     <INITIALIZATION>
+      <FPCLINE>PERFORM get_mara USING v_row_l.</FPCLINE>
+      <FPCLINE>PERFORM get_marc USING v_row_l.</FPCLINE>
+      <FPCLINE>PERFORM get_ekpo USING v_row_r.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS>
+      <FPCLINE>FORM get_mara USING v_row_l.</FPCLINE>
+      <FPCLINE>  SELECT</FPCLINE>
+      <FPCLINE>    matnr</FPCLINE>
+      <FPCLINE>    matkl</FPCLINE>
+      <FPCLINE>    bismt</FPCLINE>
+      <FPCLINE>  FROM mara</FPCLINE>
+      <FPCLINE>    INTO TABLE it_mara UP TO v_row_l ROWS.</FPCLINE>
+      <FPCLINE>ENDFORM.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>FORM get_marc USING v_row_l.</FPCLINE>
+      <FPCLINE>  SELECT</FPCLINE>
+      <FPCLINE>    matnr</FPCLINE>
+      <FPCLINE>    werks</FPCLINE>
+      <FPCLINE>    pstat</FPCLINE>
+      <FPCLINE>    dispr</FPCLINE>
+      <FPCLINE>  FROM marc</FPCLINE>
+      <FPCLINE>    INTO TABLE it_marc UP TO v_row_l ROWS.</FPCLINE>
+      <FPCLINE>ENDFORM.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>FORM get_ekpo USING v_row_r.</FPCLINE>
+      <FPCLINE>  SELECT</FPCLINE>
+      <FPCLINE>    ebeln</FPCLINE>
+      <FPCLINE>    ebelp</FPCLINE>
+      <FPCLINE>    txz01</FPCLINE>
+      <FPCLINE>    menge</FPCLINE>
+      <FPCLINE>    meins</FPCLINE>
+      <FPCLINE>  FROM ekpo</FPCLINE>
+      <FPCLINE>    INTO TABLE it_ekpo UP TO v_row_r ROWS.</FPCLINE>
+      <FPCLINE>ENDFORM.</FPCLINE>
+     </FORMS>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

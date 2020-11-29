@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>HOOK_DEF</TOOL>
+   <BADI_DATA>
+    <PGMID>R3TR</PGMID>
+    <OBJ_NAME>ZOE_ENHANCEMENT_DENEME</OBJ_NAME>
+    <OBJ_TYPE>PROG</OBJ_TYPE>
+    <MAIN_TYPE>PROG</MAIN_TYPE>
+    <MAIN_NAME>ZOE_ENHANCEMENT_DENEME</MAIN_NAME>
+    <PROGRAM>ZOE_ENHANCEMENT_DENEME</PROGRAM>
+    <DEF_HOOKS>
+     <ENH_HOOK_DEF_EXT>
+      <EXTID>1</EXTID>
+      <FULL_NAME>\PR:ZOE_ENHANCEMENT_DENEME\EX:ZOE_ENHANCE_SECTION</FULL_NAME>
+      <ENHMODE>R</ENHMODE>
+      <DEF_UNIT>
+       <INT_TYPE>PE</INT_TYPE>
+       <INT_NAME>START-OF-SELECTION</INT_NAME>
+       <INCLUDE>ZOE_ENHANCEMENT_DENEME</INCLUDE>
+      </DEF_UNIT>
+     </ENH_HOOK_DEF_EXT>
+    </DEF_HOOKS>
+   </BADI_DATA>
+  </asx:values>
+ </asx:abap>
+</abapGit>
